@@ -60,7 +60,7 @@
             {{-- Gráfica --}}
             <div class="bg-white rounded-2xl shadow p-6">
                 <h3 class="text-xl font-bold text-gray-800 mb-5">
-                    📈 Tickets por mes
+                     Tickets por mes
                 </h3>
 
                 <canvas id="ticketsChart" height="90"></canvas>
@@ -71,7 +71,7 @@
                 <div class="lg:col-span-2 bg-white rounded-2xl shadow p-6">
                     <div class="flex items-center justify-between mb-5">
                         <h3 class="text-xl font-bold text-gray-800">
-                            🕒 Últimos tickets
+                            Últimos tickets
                         </h3>
 
                         <a href="{{ route('tickets.index') }}"

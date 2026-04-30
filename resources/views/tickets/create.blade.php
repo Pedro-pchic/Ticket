@@ -2,7 +2,7 @@
     <x-slot name="header">
         <div class="flex items-center justify-between">
             <h2 class="font-bold text-2xl text-gray-800">
-                🎫 Crear Ticket
+                 Crear Ticket
             </h2>
 
             <a href="{{ route('tickets.index') }}"

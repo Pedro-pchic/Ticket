@@ -21,7 +21,7 @@
                 </div>
             @endif
 
-            <livewire:tickets-table />
+                <livewire:tickets-table />
 
         </div>
     </div>
