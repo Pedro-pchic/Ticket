@@ -21,51 +21,7 @@
                 </div>
             @endif
 
-            <div class="bg-white rounded-2xl shadow p-6 overflow-x-auto">
-                <table class="w-full text-sm text-left">
-                    <thead>
-                        <tr class="border-b text-gray-500">
-                            <th class="py-3">ID</th>
-                            <th class="py-3">Solicitante</th>
-                            <th class="py-3">Departamento</th>
-                            <th class="py-3">Asunto</th>
-                            <th class="py-3">Categoría</th>
-                            <th class="py-3">Prioridad</th>
-                            <th class="py-3">Estado</th>
-                            <th class="py-3">Fecha</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        @forelse ($tickets as $ticket)
-                            <tr class="border-b hover:bg-gray-50">
-                                <td class="py-4 font-semibold">#{{ $ticket->id }}</td>
-                                <td class="py-4">{{ $ticket->user->name ?? 'Sin usuario' }}</td>
-                                <td class="py-4">{{ $ticket->departamento ?? '-' }}</td>
-                                <td class="py-4 font-semibold text-gray-800">{{ $ticket->titulo }}</td>
-                                <td class="py-4">{{ $ticket->categoria }}</td>
-                                <td class="py-4">{{ $ticket->prioridad }}</td>
-                                <td class="py-4">
-                                    <span class="px-3 py-1 rounded-full text-xs bg-yellow-100 text-yellow-700">
-                                        {{ $ticket->estado }}
-                                    </span>
-                                </td>
-                                <td class="py-4">{{ $ticket->created_at->format('d/m/Y H:i') }}</td>
-                            </tr>
-                        @empty
-                            <tr>
-                                <td colspan="8" class="py-8 text-center text-gray-500">
-                                    No hay tickets registrados.
-                                </td>
-                            </tr>
-                        @endforelse
-                    </tbody>
-                </table>
-
-                <div class="mt-5">
-                    {{ $tickets->links() }}
-                </div>
-            </div>
+            <livewire:tickets-table />
 
         </div>
     </div>
